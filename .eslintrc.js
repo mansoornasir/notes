@@ -1,28 +1,28 @@
 module.exports = {
-    env: {
-        browser: true,
-        es2021: true,
-        amd: true,
-        node: true,
-        commonjs: true,
+  env: {
+    browser: true,
+    es2021: true,
+    amd: true,
+    node: true,
+    commonjs: true,
+  },
+  extends: ["eslint:recommended", "plugin:react/recommended"],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
     },
-    extends: ["eslint:recommended", "plugin:react/recommended"],
-    parserOptions: {
-        ecmaFeatures: {
-            jsx: true,
-        },
-        ecmaVersion: 2018,
-        sourceType: "module",
+    ecmaVersion: 2018,
+    sourceType: "module",
+  },
+  plugins: ["react", "import"],
+  rules: {
+    indent: ["error", 2],
+    quotes: ["warn", "double"],
+    "react/react-in-jsx-scope": "off",
+  },
+  settings: {
+    react: {
+      version: "detect",
     },
-    plugins: ["react", "import"],
-    rules: {
-        indent: ["error", 4],
-        quotes: ["warn", "double"],
-        "react/react-in-jsx-scope": "off",
-    },
-    settings: {
-        react: {
-            version: "detect",
-        },
-    },
+  },
 };
