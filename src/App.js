@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
@@ -6,9 +6,6 @@ function App() {
   return (
     <div className="App">
       <h1>Boilerplate React Application</h1>
-      <h1>Boilerplate React Application</h1>
-      <h1>Boilerplate React Application</h1>
-
     </div>
   );
   

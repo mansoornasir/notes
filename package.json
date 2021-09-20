@@ -1,7 +1,7 @@
 {
   "name": "react-dev",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://mansoornasir.github.io/notes/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -29,9 +29,13 @@
     "lint": "eslint ./src --fix"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint --fix"
+    "src/**/*.{js,jsx}": [
+      "eslint . --fix",
+      "git add"
+    ],
+    "src/**/*.scss": [
+      "stylelint --syntax scss --fix",
+      "git add"
     ]
   },
   "browserslist": {
