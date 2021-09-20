@@ -29,13 +29,11 @@
     "lint": "eslint ./src --fix"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": [
-      "eslint . --fix",
-      "git add"
+    "src/**/*.{ts,tsx}": [
+      "eslint --ext .tsx --ext .ts ./src --fix"
     ],
-    "src/**/*.scss": [
-      "stylelint --syntax scss --fix",
-      "git add"
+    "./src/**": [
+      "prettier --write ."
     ]
   },
   "browserslist": {
