@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
       <h1>Boilerplate React Application</h1>
+      <h1>Boilerplate React Application</h1>
     </div>
   );
   
