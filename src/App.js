@@ -1,6 +1,6 @@
 import "./App.css";
 
-function myfun() {}
+const myfun = () => {};
 
 function App() {
   return (
