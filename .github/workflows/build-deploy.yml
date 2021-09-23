@@ -20,7 +20,7 @@ jobs:
       - name: Prettier
         run: npm run format
       - name: Cypress
-        uses: cypress-io/github-action@v1
+        uses: cypress-io/github-action@v2
         with:
           run: npm run build
           start: npm run start
