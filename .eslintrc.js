@@ -24,12 +24,6 @@ module.exports = {
   },
   plugins: ["react", "import", "jest"],
   rules: {
-    "valid-jsdoc": [
-      2,
-      {
-        requireReturn: false,
-      },
-    ],
     "quote-props": ["error", "as-needed"],
     indent: ["error", 2],
     "max-len": ["error", {code: 180, tabWidth: 4, ignoreComments: true}],
