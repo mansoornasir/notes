@@ -2,7 +2,7 @@ name: Deployment
 on:
   push:
     branches:
-      - react-cypress-jest
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-latest

@@ -27,7 +27,7 @@ module.exports = {
     "quote-props": ["error", "as-needed"],
     indent: ["error", 2],
     "max-len": ["error", {code: 180, tabWidth: 4, ignoreComments: true}],
-    quotes: [2, "double", {avoidEscape: true}],
+    quotes: [2, "double", {avoidEscape: true, allowTemplateLiterals: true}],
     "react/react-in-jsx-scope": "off",
     "linebreak-style": 0,
     "require-jsdoc": [
