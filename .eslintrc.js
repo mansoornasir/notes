@@ -5,8 +5,14 @@ module.exports = {
     amd: true,
     node: true,
     commonjs: true,
+    jest: true,
   },
-  extends: ["eslint:recommended", "plugin:react/recommended", "google"],
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "google",
+    "plugin:cypress/recommended",
+  ],
   parser: "babel-eslint",
   parserOptions: {
     ecmaFeatures: {
@@ -16,11 +22,18 @@ module.exports = {
     sourceType: "module",
     allowImportExportEverywhere: true,
   },
-  plugins: ["react", "import"],
+  plugins: ["react", "import", "jest"],
   rules: {
+    "valid-jsdoc": [
+      2,
+      {
+        requireReturn: false,
+      },
+    ],
     "quote-props": ["error", "as-needed"],
     indent: ["error", 2],
-    quotes: ["warn", "double"],
+    "max-len": ["error", {code: 180, tabWidth: 4, ignoreComments: true}],
+    quotes: [2, "double", {avoidEscape: true}],
     "react/react-in-jsx-scope": "off",
     "linebreak-style": 0,
     "require-jsdoc": [
