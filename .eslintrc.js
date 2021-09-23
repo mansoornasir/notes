@@ -6,7 +6,7 @@ module.exports = {
     node: true,
     commonjs: true,
   },
-  extends: ["eslint:recommended", "plugin:react/recommended"],
+  extends: ["eslint:recommended", "plugin:react/recommended", "google"],
   parser: "babel-eslint",
   parserOptions: {
     ecmaFeatures: {
@@ -18,9 +18,23 @@ module.exports = {
   },
   plugins: ["react", "import"],
   rules: {
+    "quote-props": ["error", "as-needed"],
     indent: ["error", 2],
     quotes: ["warn", "double"],
     "react/react-in-jsx-scope": "off",
+    "linebreak-style": 0,
+    "require-jsdoc": [
+      "error",
+      {
+        require: {
+          FunctionDeclaration: false,
+          MethodDefinition: false,
+          ClassDeclaration: false,
+          ArrowFunctionExpression: false,
+          FunctionExpression: false,
+        },
+      },
+    ],
   },
   settings: {
     react: {
