@@ -20,9 +20,12 @@ jobs:
       - name: Prettier
         run: npm run format
       - name: Cypress
-        run: npm run cyrun
-      - name: Build page
-        run: npm run build
+        uses: cypress-io/github-action@v1
+        with:
+          - name: Build page
+            run: npm run build
+            start: npm run start
+            wait-on: http://localhost:3000
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
