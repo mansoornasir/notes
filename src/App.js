@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <h1>Boilerplate React Application</h1>
       <h1>Hello Fawad :D</h1>
-      <h1>Hello Test :D</h1>
+      <h1>Hello Test</h1>
     </div>
   );
 }
